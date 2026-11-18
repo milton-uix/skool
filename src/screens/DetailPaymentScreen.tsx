@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { FeedUpdate } from '../types';
-import { Calendar, Clock, MapPin, CheckCircle2, AlertCircle, CreditCard, ChevronRight } from 'lucide-react';
-import { checkCanComplete } from '../lib/supabase';
+import { Calendar, Clock, MapPin, CheckCircle2, AlertCircle, CreditCard } from 'lucide-react';
 
 interface DetailPaymentScreenProps {
   update: FeedUpdate;
 }
 
 export const DetailPaymentScreen: React.FC<DetailPaymentScreenProps> = ({ update }) => {
-  const { currentParent, otherParent, acknowledge, submitDecision, complete } = useApp();
+  const { currentParent, acknowledge, submitDecision, complete } = useApp();
   
   const [isPaid, setIsPaid] = useState(update.is_completed || false);
   const [payerName, setPayerName] = useState<string | null>(update.is_completed ? (update.completed_by_name || 'Vime Gold') : null);
