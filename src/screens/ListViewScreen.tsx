@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useApp } from '../context/AppContext';
 import { Category, FeedUpdate } from '../types';
-import { MapPin, Clock, Lock, Search } from 'lucide-react';
+import { MapPin, Clock, Search } from 'lucide-react';
 
 type FilterType = 
   | 'all'
