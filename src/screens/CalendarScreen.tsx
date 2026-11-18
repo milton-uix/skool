@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { useApp } from '../context/AppContext';
-import { Category, FeedUpdate } from '../types';
-import { MapPin, Clock, Lock } from 'lucide-react';
+import { Category } from '../types';
+import { MapPin, Clock } from 'lucide-react';
 
 interface DayInfo {
   day: number;
